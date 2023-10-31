@@ -11,7 +11,7 @@ class RegisterScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: customAppbar(),
+      appBar: customAppBar(context: context),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(15.0),
