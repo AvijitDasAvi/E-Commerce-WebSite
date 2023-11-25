@@ -76,9 +76,9 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: customAppBar(
         context: context,
         title: AppConfiq.appName,
-        isLeading: Icon(Icons.menu),
+        isLeading: const Icon(Icons.menu),
         action: [
-          IconButton(onPressed: (){}, icon: Icon(Icons.search))
+          IconButton(onPressed: (){}, icon: const Icon(Icons.search))
         ]
       ),
       body: Padding(
@@ -87,7 +87,7 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text("Hello Avijit 👋",
+              const Text("Hello Avijit 👋",
               style: TextStyle(
                 fontWeight: FontWeight.w600,
                 fontSize: 18
@@ -101,7 +101,7 @@ class _HomeScreenState extends State<HomeScreen> {
               Container(
                 height: 150,
                 width: double.infinity,
-                margin: EdgeInsets.only(
+                margin: const EdgeInsets.only(
                   top: 20,
                   bottom: 15
                 ),
@@ -127,7 +127,7 @@ class _HomeScreenState extends State<HomeScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text('Top Categories',
+                  const Text('Top Categories',
                   style: TextStyle(
                     fontWeight: FontWeight.w600,
                     fontSize: 18,
@@ -143,7 +143,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   )
                 ],
               ),
-              SizedBox(height: 5,),
+              const SizedBox(height: 5,),
               SizedBox(
                 height: 62,
                 child: ListView.builder(
@@ -153,13 +153,13 @@ class _HomeScreenState extends State<HomeScreen> {
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index){
                     return Container(
-                      margin: EdgeInsets.only(right: 10),
+                      margin: const EdgeInsets.only(right: 10),
                       width: 64,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15),
-                        color: Color(0xFFF2F2F2),
+                        color: const Color(0xFFF2F2F2),
                         border: Border.all(
-                          color: Color(0xFFD8D3D3)
+                          color: const Color(0xFFD8D3D3)
                         )
                       ),
                       child: Center(
@@ -169,15 +169,15 @@ class _HomeScreenState extends State<HomeScreen> {
                   }
                 ),
               ),
-              SizedBox(height: 10,),
-              Text('Recent Products',
+              const SizedBox(height: 10,),
+              const Text('Recent Products',
               style: TextStyle(
                 fontWeight: FontWeight.w600,
                 fontSize: 18,
               ),
               ),
               GridView.builder(
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisSpacing: 15,
                   mainAxisSpacing: 15,
                   crossAxisCount: 2,
@@ -193,7 +193,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     },
                     child: Container(
                       decoration: BoxDecoration(
-                        color: Color(0xFFF2F2F2),
+                        color: const Color(0xFFF2F2F2),
                         borderRadius: BorderRadius.circular(15)
                       ),
                       child: Column(
@@ -212,25 +212,25 @@ class _HomeScreenState extends State<HomeScreen> {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.end,
                               children: [
-                                IconButton(onPressed: (){}, icon: Icon(Icons.favorite_border))
+                                IconButton(onPressed: (){}, icon: const Icon(Icons.favorite_border))
                               ],
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.all(8.0),
+                            padding: const EdgeInsets.all(8.0),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
                                     products[index]['name']!,
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                     fontSize: 15,
                                     fontWeight: FontWeight.w500
                                   ),
                                 ),
                                 Text(
                                   products[index]['price']!,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 18
                                   ),

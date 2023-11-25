@@ -17,7 +17,7 @@ class CustomFiledHelper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-                style: TextStyle(
+                style: const TextStyle(
                   fontWeight: FontWeight.w500
                 ),
                 keyboardType: keyboardType,
@@ -28,7 +28,7 @@ class CustomFiledHelper extends StatelessWidget {
                   fillColor: AppColor.filledColor,
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(
+                    borderSide: const BorderSide(
                       color: Colors.transparent
                     ),
                   ),

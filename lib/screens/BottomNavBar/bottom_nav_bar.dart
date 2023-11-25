@@ -32,7 +32,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
             selectedIndex = index;
           });
         },
-        items: [
+        items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home),label: 'Home'),
           BottomNavigationBarItem(icon: Icon(Icons.favorite_outline),label: 'Favorite'),
           BottomNavigationBarItem(icon: Icon(Icons.shopping_cart),label: 'Cart'),

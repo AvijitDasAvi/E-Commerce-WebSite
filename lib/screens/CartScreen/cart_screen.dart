@@ -60,7 +60,7 @@ class _CartScreenState extends State<CartScreen> {
                               fontWeight: FontWeight.w500
                             ),
                           ),
-                          Text(
+                          const Text(
                             'Price',
                             style: TextStyle(
                               fontWeight: FontWeight.bold,

@@ -55,7 +55,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 suffixIcon: IconButton(
                   onPressed: (){
                   }, 
-                  icon: Icon(Icons.visibility)
+                  icon: const Icon(Icons.visibility)
                 ),
               ),
               const SizedBox(height: 10,),
@@ -83,7 +83,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 onTap: () {
                   Navigator.push(context, MaterialPageRoute(builder: (_) => RegisterScreen()));
                 },
-                child: Text(
+                child: const Text(
                   'Create new account',
                   style: TextStyle(
                     fontSize: 16,
