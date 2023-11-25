@@ -5,8 +5,10 @@ PreferredSizeWidget customAppBar ({
   List<Widget>? action,
   Widget? isLeading,
   required BuildContext context,
+  Color? background,
 }) {
   return AppBar(
+    backgroundColor: background,
     centerTitle: true,
     automaticallyImplyLeading: false,
     leading: isLeading ?? IconButton(onPressed: (){

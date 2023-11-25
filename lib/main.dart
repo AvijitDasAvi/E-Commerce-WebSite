@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:industrial_project/screens/BottomNavBar/bottom_nav_bar.dart';
+import 'package:industrial_project/screens/SplashScreen/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueAccent),
         useMaterial3: true
       ),
-      home: BottomNavBar(),
+      home: const SplashScreen(),
     );
   }
 }

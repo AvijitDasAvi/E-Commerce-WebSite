@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:industrial_project/GlobalWidgets/custom_appbar.dart';
 import 'package:industrial_project/const/color.dart';
 import 'package:industrial_project/const/confiq.dart';
+import 'package:industrial_project/screens/ProductDetails/product_details.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -186,54 +187,59 @@ class _HomeScreenState extends State<HomeScreen> {
                 shrinkWrap: true,
                 primary: false,
                 itemBuilder: (context, index){
-                  return Container(
-                    decoration: BoxDecoration(
-                      color: Color(0xFFF2F2F2),
-                      borderRadius: BorderRadius.circular(15)
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                          height: 120,
-                          width: double.infinity,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15),
-                            image: DecorationImage(
-                              image: AssetImage(products[index]['image']!),
-                              fit: BoxFit.cover
-                              )
+                  return InkWell(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (_)=> ProductDetailsPage(product: products[index],)));
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Color(0xFFF2F2F2),
+                        borderRadius: BorderRadius.circular(15)
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                            height: 120,
+                            width: double.infinity,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(15),
+                              image: DecorationImage(
+                                image: AssetImage(products[index]['image']!),
+                                fit: BoxFit.cover
+                                )
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.end,
+                              children: [
+                                IconButton(onPressed: (){}, icon: Icon(Icons.favorite_border))
+                              ],
+                            ),
                           ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.end,
-                            children: [
-                              IconButton(onPressed: (){}, icon: Icon(Icons.favorite_border))
-                            ],
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                  products[index]['name']!,
+                          Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                    products[index]['name']!,
+                                    style: TextStyle(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w500
+                                  ),
+                                ),
+                                Text(
+                                  products[index]['price']!,
                                   style: TextStyle(
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.w500
-                                ),
-                              ),
-                              Text(
-                                products[index]['price']!,
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 18
-                                ),
-                              )
-                            ],
-                          ),
-                        )
-                      ],
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 18
+                                  ),
+                                )
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   );
                 }

@@ -3,6 +3,7 @@ import 'package:industrial_project/GlobalWidgets/custom_appbar.dart';
 import 'package:industrial_project/const/color.dart';
 import 'package:industrial_project/const/helper/custom_button.dart';
 import 'package:industrial_project/const/helper/custom_filed_helper.dart';
+import 'package:industrial_project/screens/BottomNavBar/bottom_nav_bar.dart';
 import 'package:industrial_project/screens/RegisterScreen/register_screen.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -74,6 +75,7 @@ class _LoginScreenState extends State<LoginScreen> {
               CustomButton(
                 buttonText: 'Sign In',
                 onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (_)=> BottomNavBar()));
                 },
               ),
               const SizedBox(height: 15,),

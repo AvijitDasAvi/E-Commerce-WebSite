@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:industrial_project/const/color.dart';
+import 'package:industrial_project/screens/CartScreen/cart_screen.dart';
 import 'package:industrial_project/screens/HomeScreen/home_screen.dart';
 
 class BottomNavBar extends StatefulWidget {
@@ -14,7 +15,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   List<Widget> screens = [
     const HomeScreen(),
     const Center(child: Text('Favorite'),),
-    const Center(child: Text('Cart'),),
+    const CartScreen(),
     const Center(child: Text('Person'),),
   ];
   @override
